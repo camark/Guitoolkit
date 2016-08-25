@@ -24,7 +24,7 @@
 
 
 
-#import "\Program Files\Common Files\System\ADO\msado15.dll" rename_namespace("ADOCG") rename("EOF", "EndOfFile")
+#import "c:\Program Files\Common Files\System\ADO\msado15.dll" rename_namespace("ADOCG") rename("EOF", "EndOfFile")
 
 using namespace ADOCG;
 

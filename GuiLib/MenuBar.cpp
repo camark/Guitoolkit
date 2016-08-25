@@ -126,7 +126,7 @@ static BOOL _InitCommonResources(BOOL bForce = FALSE)
 	// create vertical font
 	info.lfMenuFont.lfEscapement = -900;
 	info.lfMenuFont.lfOrientation = -900;
-	strcpy(info.lfMenuFont.lfFaceName,"verdana");
+	memcpy(info.lfMenuFont.lfFaceName,"verdana",sizeof("verdana"));
 	if (!_fontVertMenu.CreateFontIndirect(&info.lfMenuFont))
 		return FALSE;
 
@@ -2419,7 +2419,7 @@ CMenuButton::CMenuButton(HMENU hMenu, int nIndex,CWnd* pWnd)
 	ASSERT(::IsMenu(hMenu));
 	ASSERT(nIndex >= 0);
 	pParent=pWnd;
-	m_cfont.CreateFont(-11,0,0,0,400,0,0,0,0,1,2,1,34,"MS Sans Serif");
+	m_cfont.CreateFont(-11,0,0,0,400,0,0,0,0,1,2,1,34,_T("MS Sans Serif"));
 	m_fsStyle |= (MISTYLE_TRACKABLE | MISTYLE_WRAPPABLE);
 	m_bt.Create(_T(""), WS_VISIBLE | WS_CHILD | BS_PUSHBUTTON | BS_OWNERDRAW, 
 		CRect(0,0,0,0), pWnd, nIndex);
@@ -2978,19 +2978,19 @@ CMenuControl::CMenuControl(CWnd* pMenuBar)
 	m_arrButton[2].Create(_T(""), WS_VISIBLE | WS_CHILD | BS_PUSHBUTTON | BS_OWNERDRAW, 
 		CRect(0,0,0,0),m_pMenuBar, SC_CLOSE);
 	m_arrButton[2].SethIcon(m_img.ExtractIcon(2));
-	m_arrButton[2].SetToolTip("Close");
+	m_arrButton[2].SetToolTip(_T("Close"));
 	m_arrButton[2].SetColor(GuiDrawLayer::GetRGBColorFace(GuiDrawLayer::m_Style));
 	m_arrButton[2].ShowDark(FALSE);
 	m_arrButton[1].Create(_T(""), WS_VISIBLE | WS_CHILD | BS_PUSHBUTTON | BS_OWNERDRAW, 
 		CRect(0,0,0,0),m_pMenuBar, SC_RESTORE);
 	m_arrButton[1].SethIcon(m_img.ExtractIcon(1));
-	m_arrButton[1].SetToolTip("Restore");
+	m_arrButton[1].SetToolTip(_T("Restore"));
 	m_arrButton[1].SetColor(GuiDrawLayer::GetRGBColorFace(GuiDrawLayer::m_Style));
 	m_arrButton[1].ShowDark(FALSE);
 	m_arrButton[0].Create(_T(""), WS_VISIBLE | WS_CHILD | BS_PUSHBUTTON | BS_OWNERDRAW, 
 		CRect(0,0,0,0),m_pMenuBar,SC_MINIMIZE);
 	m_arrButton[0].SethIcon(m_img.ExtractIcon(0));
-	m_arrButton[0].SetToolTip("Minimize");
+	m_arrButton[0].SetToolTip(_T("Minimize"));
 	m_arrButton[0].SetColor(GuiDrawLayer::GetRGBColorFace(GuiDrawLayer::m_Style));
 	m_arrButton[0].ShowDark(FALSE);
 	CSize sizeCaption = GetCaptionSize();

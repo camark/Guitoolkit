@@ -32,7 +32,7 @@ IMPLEMENT_DYNAMIC(CGuiStatusBar, CStatusBar)
 CGuiStatusBar::CGuiStatusBar()
 {
 	m_Style=DEVSTUDIO;
-	m_cfont.CreateFont(14,0,0,0,400,0,0,0,0,1,2,1,34,"Arial");
+	m_cfont.CreateFont(14,0,0,0,400,0,0,0,0,1,2,1,34,_T("Arial"));
 	m_StyleDisplay=GUISTYLE_XP;
 }
 

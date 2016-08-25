@@ -55,8 +55,8 @@ CGuiTabWnd::CGuiTabWnd()
 	m_sizeImag=CSize(15,15);
 	m_pArray.RemoveAll();
 	m_iMinValRec=0;  //minimo valor requerido para mostrar toda las carpetas
-	m_cfont.CreateFont(-11,0,0,0,400,0,0,0,0,1,2,1,34,"MS Sans Serif");
-	m_cfontBold.CreateFont(-11,2,0,0,FW_BOLD,0,0,0,0,1,2,1,34,"MS Sans Serif");
+	m_cfont.CreateFont(-11,0,0,0,400,0,0,0,0,1,2,1,34,_T("MS Sans Serif"));
+	m_cfontBold.CreateFont(-11,2,0,0,FW_BOLD,0,0,0,0,1,2,1,34,_T("MS Sans Serif"));
 	m_style=S3D;
 	m_ActualTitle=TRUE;
 	m_alnTab=ALN_BOTTOM;
@@ -455,7 +455,7 @@ void CGuiTabWnd::Drawtabs(CDC* dc)
 		}
 		//se dibuja el icono
 		int nMode = dc->SetBkMode(TRANSPARENT);
-		CSize m_sChar=dc->GetTextExtent(ct->lpMsg,strlen(ct->lpMsg));
+		CSize m_sChar=dc->GetTextExtent(ct->lpMsg,ct->lpMsg.GetLength());
 		COLORREF clrtext;
 		if (iCont !=m_iSelectTab)
 			clrtext=dc->SetTextColor(GuiDrawLayer::GetRGBColorGrayText());

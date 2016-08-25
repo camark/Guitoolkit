@@ -154,14 +154,14 @@ void CGuiComboBoxExt::SaveHistory(CString szHistory,BOOL bSaveCurrent)
 		if(nCurs < 0) return;
 		GetLBText(nCurs,sCad);
 		CString nKeyHist=szHistory+"SaveCurrent";
-		pAppWin->WriteProfileString("ComboHistory",nKeyHist,sCad);
+		pAppWin->WriteProfileString(_T("ComboHistory"),nKeyHist,sCad);
 	}
 	
 	for(int i=0; i< nSize; i++)
 	{
 		GetLBText(i,sCad);
-		sKey.Format("%s%d",szHistory,i);
-		pAppWin->WriteProfileString("ComboHistory",sKey,sCad);
+		sKey.Format(_T("%s%d"),szHistory,i);
+		pAppWin->WriteProfileString(_T("ComboHistory"),sKey,sCad);
 	}
 }
 
@@ -173,8 +173,8 @@ void CGuiComboBoxExt::LoadHistory(CString szHistory,BOOL bLoadCurrent)
 	CWinApp* pAppWin = AfxGetApp();
 	int i=0;
 	while(1){
-		sKey.Format("%s%d",szHistory,i++);
-		sCad=pAppWin->GetProfileString("ComboHistory",sKey);
+		sKey.Format(_T("%s%d"),szHistory,i++);
+		sCad=pAppWin->GetProfileString(_T("ComboHistory"),sKey);
 		if (sCad.IsEmpty())
 			break;
 		AddString(sCad);
@@ -182,7 +182,7 @@ void CGuiComboBoxExt::LoadHistory(CString szHistory,BOOL bLoadCurrent)
 	if (bLoadCurrent)
 	{
 		CString sKeyHist=szHistory+"SaveCurrent";
-		sCad=pAppWin->GetProfileString("ComboHistory",sKeyHist);
+		sCad=pAppWin->GetProfileString(_T("ComboHistory"),sKeyHist);
 		if (sCad.IsEmpty())
 			return;
 		AddString(sCad);
@@ -199,8 +199,8 @@ int	 CGuiComboBoxExt::AddString(LPCTSTR lpszString)
 	if (szCadAdd.IsEmpty()) return -1;
 	if(bhistory!=TRUE)
 		return CComboBox::AddString(lpszString);
-	szCadAdd.TrimLeft(" ");
-	szCadAdd.TrimRight(" ");
+	szCadAdd.TrimLeft(_T(" "));
+	szCadAdd.TrimRight(_T(" "));
 	int nret=CComboBox::InsertString(0,szCadAdd);
 	int nFindCad=FindStringExact(0, szCadAdd);
 	if (nFindCad != -1 && nFindCad != 0)
@@ -226,11 +226,11 @@ void CGuiComboBoxExt::DeleteHistory(CString szHistory)
 	int nCount = GetCount();
     for (int i = 0; i < nCount; i++)
     {
-	  sKey.Format("%s%d", szHistory,i);
+	  sKey.Format(_T("%s%d"), szHistory,i);
       rk.DeleteValue(sKey);
     }
   CString nKeyHist=szHistory+"SaveCurrent";
-  pAppWin->WriteProfileString("ComboHistory",nKeyHist,"");
+  pAppWin->WriteProfileString(_T("ComboHistory"),nKeyHist,_T(""));
   ResetContent();
 }
 void CGuiComboBoxExt::PreSubclassWindow() 

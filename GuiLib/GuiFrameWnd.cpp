@@ -53,17 +53,17 @@ BOOL CGuiFrameWnd::PreCreateWindow(CREATESTRUCT& cs)
 	// Restore main window position
 	CWinApp* pApp = AfxGetApp();
 	TCHAR szSection[256];
- 	wsprintf(szSection, "%s-Main", sProfile);
+ 	wsprintf(szSection, _T("%s-Main"), sProfile);
 
 	// Restore main window position
     CWinApp* app = AfxGetApp();
     int s, t, b, r, l;
 
-	l = pApp->GetProfileInt(szSection, "left",10);
-	t = pApp->GetProfileInt(szSection, "top",10);
-	b = pApp->GetProfileInt(szSection, "bottom",400);
-	r = pApp->GetProfileInt(szSection, "right",600);
-	s = pApp->GetProfileInt(szSection, "status", SW_NORMAL);
+	l = pApp->GetProfileInt(szSection, _T("left"),10);
+	t = pApp->GetProfileInt(szSection, _T("top"),10);
+	b = pApp->GetProfileInt(szSection, _T("bottom"),400);
+	r = pApp->GetProfileInt(szSection, _T("right"),600);
+	s = pApp->GetProfileInt(szSection, _T("status"), SW_NORMAL);
 	GuiDrawLayer::m_Style=(int)pApp->WriteProfileInt(szSection, _T("Style"),GUISTYLE_XP);
 	GuiDrawLayer::m_Theme=(int)pApp->WriteProfileInt(szSection, _T("Theme"),0);
 
@@ -261,17 +261,17 @@ BOOL CGuiFrameWnd::DestroyWindow()
 {
 	CWinApp* pApp = AfxGetApp();
 	TCHAR szSection[256];
-	wsprintf(szSection, "%s-Main", sProfile);
+	wsprintf(szSection, _T("%s-Main"), sProfile);
 
 	WINDOWPLACEMENT wp;
     GetWindowPlacement(&wp);
 	
 	pApp->WriteProfileString(szSection, NULL, NULL);
-	pApp->WriteProfileInt(szSection, "left", wp.rcNormalPosition.left);
-	pApp->WriteProfileInt(szSection, "right", wp.rcNormalPosition.right);
-	pApp->WriteProfileInt(szSection, "bottom", wp.rcNormalPosition.bottom);
-	pApp->WriteProfileInt(szSection, "top", wp.rcNormalPosition.top);
-	pApp->WriteProfileInt(szSection, "status", wp.showCmd);
+	pApp->WriteProfileInt(szSection, _T("left"), wp.rcNormalPosition.left);
+	pApp->WriteProfileInt(szSection, _T("right"), wp.rcNormalPosition.right);
+	pApp->WriteProfileInt(szSection, _T("bottom"), wp.rcNormalPosition.bottom);
+	pApp->WriteProfileInt(szSection, _T("top"), wp.rcNormalPosition.top);
+	pApp->WriteProfileInt(szSection, _T("status"), wp.showCmd);
 	pApp->WriteProfileInt(szSection, _T("Style"),(int) GuiDrawLayer::m_Style);
 	pApp->WriteProfileInt(szSection, _T("Theme"),(int) GuiDrawLayer::m_Theme);
 

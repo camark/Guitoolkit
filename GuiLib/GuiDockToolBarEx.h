@@ -23,7 +23,7 @@ static BOOL InitGlobalFont()
 	// create vertical font
 	info.lfMenuFont.lfEscapement = -900;
 	info.lfMenuFont.lfOrientation = -900;
-	strcpy(info.lfMenuFont.lfFaceName,"verdana");
+	memcpy(info.lfMenuFont.lfFaceName,"verdana",sizeof("verdana"));
 	if(!m_fontVertMenu.CreateFontIndirect(&info.lfMenuFont))
 		return FALSE;
 

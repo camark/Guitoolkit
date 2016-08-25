@@ -148,7 +148,7 @@ CFrameWnd* pParent = STATIC_DOWNCAST(CFrameWnd, AfxGetMainWnd());
 	
 	while (pWnd != NULL)
 	{
-		::GetClassName(pWnd->GetSafeHwnd(),ClassName,32);
+		::GetClassName(pWnd->GetSafeHwnd(),(LPWSTR)ClassName,32);
 		CString szClassName=ClassName;
 		if(szClassName=="MDIClient")
 			break;

@@ -32,7 +32,7 @@ CString GetError(_com_error &e)
 	CString MsgBug;
 	_bstr_t Source(e.Source());
 	_bstr_t Description(e.Description());
-	MsgBug.Format( "Ups!!! \nSource = %s\nDescription= %s\n",(LPCSTR)Source, (LPCSTR)Description );
+	MsgBug.Format( _T("Ups!!! \nSource = %s\nDescription= %s\n"),(LPCSTR)Source, (LPCSTR)Description );
 	#ifdef _DEBUG
 		AfxMessageBox( MsgBug, MB_OK | MB_ICONERROR );
 	#endif	
@@ -1392,7 +1392,7 @@ BOOL CGuiParameter::GetValue(long& lVal)
 		}if (vt.vt==VT_BSTR)
 		{
 			CString cad=vt.bstrVal;
-			lVal=atol(cad);
+			lVal=_wtol((LPCWSTR)cad);
 			return TRUE;
 		}
 		else return FALSE;
