@@ -1,0 +1,302 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "Audit"=.\SAMPLES\Audit\Audit.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "CGuiAccess"=.\Samples\CGuiAccess\CGuiAccess.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name GuiLib
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "CGuiFlatTabbedView"=.\Samples\CGuiFlatTabbedView\CGuiFlatTabbedView.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name GuiLib
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "CGuiOfficeDemo"=.\Samples\CGuiOfficeDemo\CGuiOfficeDemo.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name GuiLib
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "CGuiPowerPoint"=.\Samples\CGuiPowerPoint\CGuiPowerPoint.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name GuiLib
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "CGuiTabbedDemo"=.\Samples\CGuiTabbedDemo\CGuiTabbedDemo.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name GuiLib
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "DialogExcelTabs"=.\Samples\DialogExcelTabs\DialogExcelTabs.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name GuiLib
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "EditListBox"=.\Samples\EditListBox\EditListBox.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name GuiLib
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "GuiAdoTest"=.\Samples\GuiAdoTest\GuiAdoTest.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "GuiHeaderControl"=.\Samples\GuiHeaderControl\GuiHeaderControl.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name GuiLib
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "GuiLib"=.\GuiLib\GuiLib.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "GuiLibStatic"=.\GuiLib\GuiLibStatic.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "GuiPanelAccessDemo"=.\Samples\GuiPanelAccessDemo\GuiPanelAccessDemo.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name GuiLib
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "GuiVisioDemo"=.\Samples\GuiVisioDemo\GuiVisioDemo.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name GuiLib
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Gui_DevStudio"=.\Samples\Gui_DevStudio\Gui_DevStudio.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "OutlookDemo"=.\Samples\OutlookDemo\OutlookDemo.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name GuiLib
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "SDIDemo"=.\Samples\SDIDemo\SDIDemo.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name GuiLib
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestDlg"=.\Samples\TestDlg\TestDlg.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name GuiLib
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "ToolBarsDemo"=.\Samples\ToolBarsDemo\ToolBarsDemo.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name GuiLib
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "dialogcontrols"=.\Samples\dialogcontrols\dialogcontrols.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name GuiLib
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

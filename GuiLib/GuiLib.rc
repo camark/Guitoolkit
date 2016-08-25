@@ -1,0 +1,208 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "GuiLibRes.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_GUI_DOCKBAR         BITMAP  MOVEABLE PURE   "res\\guidockbar.bmp"
+IDB_GUI_DOCKBAROFFICE   BITMAP  MOVEABLE PURE   "res\\guidockoffice.bmp"
+IDB_GUI_MDIICONS        BITMAP  MOVEABLE PURE   "res\\guimdiicons.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_GUI_ARROWDOWN       ICON    DISCARDABLE     "res\\guiarrowdown.ico"
+IDI_GUI_ARROWRIGHT      ICON    DISCARDABLE     "res\\guiarrowright.ico"
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_GUI_DEFAULT         BITMAP  DISCARDABLE     "res\\GuiDefault.bmp"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "GuiLibRes.h\0"
+END
+
+2 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\GuiLib.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_GUI_MENUSYS MENU DISCARDABLE 
+BEGIN
+    POPUP "System"
+    BEGIN
+        MENUITEM "&Restore",                    547
+        MENUITEM "&Move",                       3, GRAYED
+        MENUITEM "&Size",                       5, GRAYED
+        MENUITEM "Mi&nimize",                   549
+        MENUITEM "Ma&ximise",                   549, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Close Ctrl+F4",               545
+        MENUITEM SEPARATOR
+        MENUITEM "Next Ctrl+F6",                548
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_GUI_WINDOW_MANAGE DIALOG DISCARDABLE  0, 0, 316, 188
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Windows"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_GUI_WINDOWLIST_LIST,7,18,230,161,LBS_SORT | 
+                    LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | LBS_USETABSTOPS | 
+                    LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "&Actvate",IDC_GUI_WINDOWLIST_ACTIVATE,243,17,66,15
+    PUSHBUTTON      "&OK",IDOK,243,36,66,15
+    PUSHBUTTON      "&Save",IDC_GUI_WINDOWLIST_SAVE,243,55,66,15
+    PUSHBUTTON      "&Close Window(s)",IDC_GUI_WINDOWLIST_CLOSE,243,74,66,15
+    PUSHBUTTON      "Cascade",IDC_GUI_WINDOWLIST_CASCADE,243,93,66,14
+    PUSHBUTTON      "Tile &Horizontaly",IDC_GUI_WINDOWLIST_TILEHORZ,243,111,
+                    66,14
+    PUSHBUTTON      "Tile &Verticaly",IDC_GUI_WINDOWLIST_TILEVERT,243,129,66,
+                    14
+    PUSHBUTTON      "Minimize",IDC_GUI_WINDOWLIST_MINIMIZE,243,147,66,14
+    LTEXT           "Select &window:",IDC_STATIC,7,7,49,8
+    PUSHBUTTON      "&Help",IDC_GUI_WINDOWLIST_HELP,243,165,66,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_GUI_DEFAULT TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      ID_GUI_FILE_CLOSE
+    BUTTON      ID_GUI_FILE_CLOSE
+    BUTTON      ID_GUI_WINDOW_CLOSE_ALL
+    BUTTON      ID_GUI_FILE_SAVE
+    BUTTON      ID_GUI_WINDOW_CLOSE_ALL
+    BUTTON      ID_GUI_WINDOW_NEW
+    BUTTON      ID_GUI_WINDOW_NEXT
+    BUTTON      ID_GUI_WINDOW_PREVIOUS
+    BUTTON      ID_GUI_WINDOW_CASCADE
+    BUTTON      ID_GUI_WINDOW_TILE_HORZ
+    BUTTON      ID_GUI_WINDOW_TILE_VERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_GUI_WINDOW_MANAGE   "Windows..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\GuiLib.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
